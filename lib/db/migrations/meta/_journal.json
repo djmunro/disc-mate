@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1695520044126,
+      "tag": "0000_typical_the_professor",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1695521094635,
+      "tag": "0001_daily_mantis",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1695521256091,
+      "tag": "0002_icy_tarot",
+      "breakpoints": true
+    }
+  ]
+}

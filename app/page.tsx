@@ -1,9 +1,19 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { getPets } from "./pets";
 
-export default function Home() {
+export default async function Home() {
+  const pets = await getPets();
+
   return (
     <main className={styles.main}>
+      {pets.map((pet) => (
+        <div key={pet.name}>
+          <h1>{pet.name}</h1>
+          <p>{pet.owner}</p>
+        </div>
+      ))}
+
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -15,7 +25,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -91,5 +101,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
